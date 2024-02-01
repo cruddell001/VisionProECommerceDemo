@@ -3,6 +3,9 @@
 ## Introduction
 THAT_MerchandisingApp is a cutting-edge e-commerce application designed for Apple's Vision Pro, leveraging the capabilities of VisionOS and RealityKit to provide an immersive shopping experience. This application allows users to browse through a BigCommerce storefront, showcasing products like Mugs and Hats in detailed 3D models. Built with SwiftUI, the app is a showcase of integrating traditional e-commerce with virtual reality environments.
 
+![vision_os_screenshot](https://github.com/cruddell001/VisionProECommerceDemo/assets/3074965/7507e704-d805-457b-ab6e-d2c81b1d2946)
+
+
 ## History
 This project was designed and demonstrated as part of a talk at THAT Conference in Round Rock, TX in January 2024.
 Talk details available at: https://thatconference.com/activities/EZZ32EtRb0I3hr0RRcED

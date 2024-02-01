@@ -9,13 +9,18 @@ import SwiftUI
 
 @main
 struct THAT_MerchandisingApp: App {
+  
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          ContentView(viewModel: ViewModel.shared)
         }
 
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+        ImmersiveSpace(id: "MyThatMug") {
+            MugView()
+        }
+      
+        ImmersiveSpace(id: "MyThatHat") {
+          HatView()
         }
     }
 }

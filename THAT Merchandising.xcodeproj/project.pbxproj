@@ -13,6 +13,9 @@
 		1F97D7D42B6AE851003E3F23 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D7D32B6AE851003E3F23 /* ImmersiveView.swift */; };
 		1F97D7D62B6AE853003E3F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F97D7D52B6AE853003E3F23 /* Assets.xcassets */; };
 		1F97D7D92B6AE853003E3F23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F97D7D82B6AE853003E3F23 /* Preview Assets.xcassets */; };
+		1F97D7E12B6AEA08003E3F23 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D7E02B6AEA08003E3F23 /* WebView.swift */; };
+		1F97D7E32B6AEC7D003E3F23 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D7E22B6AEC7D003E3F23 /* Products.swift */; };
+		1F97D7E52B6AEE19003E3F23 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D7E42B6AEE19003E3F23 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1F97D7D52B6AE853003E3F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F97D7D82B6AE853003E3F23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F97D7DA2B6AE853003E3F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F97D7E02B6AEA08003E3F23 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		1F97D7E22B6AEC7D003E3F23 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		1F97D7E42B6AEE19003E3F23 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				1F97D7D52B6AE853003E3F23 /* Assets.xcassets */,
 				1F97D7DA2B6AE853003E3F23 /* Info.plist */,
 				1F97D7D72B6AE853003E3F23 /* Preview Content */,
+				1F97D7E02B6AEA08003E3F23 /* WebView.swift */,
+				1F97D7E22B6AEC7D003E3F23 /* Products.swift */,
+				1F97D7E42B6AEE19003E3F23 /* ViewModel.swift */,
 			);
 			path = "THAT Merchandising";
 			sourceTree = "<group>";
@@ -158,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F97D7D22B6AE851003E3F23 /* ContentView.swift in Sources */,
+				1F97D7E12B6AEA08003E3F23 /* WebView.swift in Sources */,
+				1F97D7E32B6AEC7D003E3F23 /* Products.swift in Sources */,
 				1F97D7D02B6AE851003E3F23 /* THAT_MerchandisingApp.swift in Sources */,
+				1F97D7E52B6AEE19003E3F23 /* ViewModel.swift in Sources */,
 				1F97D7D42B6AE851003E3F23 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

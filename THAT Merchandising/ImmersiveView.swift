@@ -9,18 +9,25 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ImmersiveView: View {
+struct MugView: View {
     var body: some View {
         RealityView { content in
             // Add the initial RealityKit content
-            if let scene = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
+            if let scene = try? await Entity(named: "Mug", in: realityKitContentBundle) {
                 content.add(scene)
             }
         }
     }
 }
 
-#Preview {
-    ImmersiveView()
-        .previewLayout(.sizeThatFits)
+struct HatView: View {
+  var body: some View {
+    RealityView { content in
+      // Add the initial RealityKit content
+      if let scene = try? await Entity(named: "Hat", in: realityKitContentBundle) {
+        content.add(scene)
+      }
+    }
+  }
 }
+

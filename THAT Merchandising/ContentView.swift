@@ -10,46 +10,56 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
+    @ObservedObject var viewModel: ViewModel
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
-        }
-        .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                    case .opened:
-                        immersiveSpaceIsShown = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
-                    }
-                } else if immersiveSpaceIsShown {
-                    await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
-                }
+      NavigationSplitView {
+        List {
+          Text("Home")
+            .onTapGesture {
+              print("Tapped home")
+              viewModel.showProduct(product: .None)
+            }
+          Text("Hat")
+            .onTapGesture {
+              print("Tapped Hat")
+              viewModel.showProduct(product: .Hat)
+            }
+          Text("Mug")
+            .onTapGesture {
+              print("Tapped Mug")
+              viewModel.showProduct(product: .Mug)
             }
         }
+      } detail: {
+        WebView(viewModel: viewModel)
+      }
+        .padding()
+        .onChange(of: viewModel.productLoaded) { oldValue, newValue in
+          Task {
+            print("product loaded changed from \(oldValue) to \(newValue)")
+            switch oldValue {
+              case .Hat, .Mug:
+                await dismissImmersiveSpace()
+              case .None:
+                print("doing nothing")
+            }
+            switch newValue {
+              case .None:
+                print("Not showing anything")
+              case .Hat:
+                await openImmersiveSpace(id: "MyThatHat")
+              case .Mug:
+                await openImmersiveSpace(id:"MyThatMug")
+            }
+            
+            
+          }
+        }
+        
     }
 }
 
-#Preview(windowStyle: .automatic) {
-    ContentView()
-}
